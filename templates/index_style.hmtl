@@ -10,13 +10,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-  #map {
-      height: 400px;  /* The height is 400 pixels */
-      width: 100%;  /* The width is the width of the web page */
-  }
-
-
-
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
@@ -364,10 +357,10 @@
 // Initialize and add the map
 function initMap() {
 // The location of Uluru
-var uluru = {lat: 55.954967, lng: -3.241403};
+var uluru = {lat: -25.344, lng: 131.036};
 // The map, centered at Uluru
 var map = new google.maps.Map(
-    document.getElementById('map'), {zoom: 8, center: uluru});
+    document.getElementById('map'), {zoom: 4, center: uluru});
 // The marker, positioned at Uluru
 var marker = new google.maps.Marker({position: uluru, map: map});
 }

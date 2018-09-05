@@ -1,5 +1,18 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template
+import os
+from pymongo import MongoClient
+#from bson import ObjectId
+#from pymongo import MongoClient
+
+myclient=MongoClient() 
+mydb=myclient["quotes"]
+mycol=mydb["quotes"]
+
+mydoc=mycol.find();
+
+for x in mydoc:
+	print(x)
 
 # create the application object
 app = Flask(__name__,static_url_path='/static')
